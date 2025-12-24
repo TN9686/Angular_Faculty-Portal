@@ -1,0 +1,28 @@
+<div class="course-container" style="margin-top: 20px;">
+  <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+    <input 
+      [(ngModel)]="newCourseName" 
+      placeholder="Enter Course Name" 
+      style="padding: 10px; flex: 1; border: 1px solid #ccc; border-radius: 4px;">
+    <button 
+      (click)="addCourse()" 
+      style="padding: 10px 20px; background: #3f51b5; color: white; border: none; border-radius: 4px; cursor: pointer;">
+      Add Course
+    </button>
+  </div>
+
+  <div class="course-list">
+    <h3>Existing Courses</h3>
+    <div *ngFor="let course of (courses$ | async)" 
+         style="display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid #eee; background: white; margin-bottom: 5px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+      
+      <span style="font-weight: 500;">{{ course.name }}</span>
+      
+      <button 
+        (click)="deleteCourse(course.id)" 
+        style="padding: 5px 10px; background: #f44336; color: white; border: none; border-radius: 4px; cursor: pointer;">
+        Delete
+      </button>
+    </div>
+  </div>
+</div>

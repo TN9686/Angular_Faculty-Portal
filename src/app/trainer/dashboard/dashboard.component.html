@@ -1,0 +1,9 @@
+<h2>Trainer Dashboard</h2>
+
+<mat-card>
+  <h3>Active Courses</h3>
+  <h1>{{ (courses$ | async)?.length }}</h1>
+</mat-card>
+
+<app-course-mgmt></app-course-mgmt>
+
