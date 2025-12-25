@@ -36,7 +36,7 @@ export class TrainerService {
 
   deleteCourse(id: number) {
   const currentCourses = this.coursesSubject.value;
-  // Filter out the course with the matching ID
+
   const updatedCourses = currentCourses.filter(course => course.id !== id);
   this.coursesSubject.next(updatedCourses);
 }
