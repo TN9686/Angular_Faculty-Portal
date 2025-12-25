@@ -12,7 +12,7 @@ export interface Course {
   providedIn: 'root'
 })
 export class TrainerService {
-  // Mock Data
+
   private courses: Course[] = [
     { id: 1, name: 'Angular Core Deep Dive', students: 45, rating: 4.8 },
     { id: 2, name: 'RxJS Mastery', students: 30, rating: 4.9 }
